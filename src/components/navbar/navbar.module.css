@@ -1,0 +1,39 @@
+
+
+
+
+
+
+.container {
+    
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px ;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 22px;
+    background-color: red;
+    margin-left: 25px;
+    
+  }
+  
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+  }
+  
+  .Registration {
+    
+    padding: 5px;
+    border: none;
+    background-color: #53c28b;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
