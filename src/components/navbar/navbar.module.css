@@ -1,39 +1,47 @@
 
-
-
-
-
-
 .container {
-    
-    height: 100px;
+  display: fixed;
+  width: 100%;
+    margin-top: 8px;
+    height:70px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding:20px ;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 22px;
-    background-color: red;
-    margin-left: 25px;
+    align-items: center; 
+    /* padding-left: 15px; */
+    background: #445473;
+    color: white;
     
   }
   
+   .logo {
+    padding-left: 20px;
+  }
+   
   .links {
     display: flex;
     align-items: center;
     gap: 20px;
     
+    
   }
   
-  .Registration {
-    
-    padding: 5px;
-    border: none;
-    background-color: #53c28b;
-    color: white;
-    cursor: pointer;
-    border-radius: 3px;
-  }
+ .button {
+  
+  width: 75px;
+  height: 45px;
+  margin-top: 50px;
+  border: 3px solid #feb002;
+  border-radius: 4px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1em;
+  font-weight: 950;
+  margin-bottom: 50px;
+}
+
+.button:hover {
+  background: #feb002;
+  color: white;
+  font-size: 1.1em;
+}
