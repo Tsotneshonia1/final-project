@@ -1,0 +1,22 @@
+.button{
+    
+    cursor: pointer;
+    width: 75px;
+    height: 45px;
+    margin-top: 50px;
+    border: 3px solid #feb002;
+    border-radius: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1em;
+    font-weight: 950;
+    margin-bottom: 50px;
+}
+
+
+.button:hover {
+    background: #feb002;
+    color: white;
+    font-size: 1.1em;
+  }

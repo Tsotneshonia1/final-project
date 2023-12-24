@@ -50,7 +50,7 @@ const Navbar = () => {
           height={44}
           className={styles.logo}
         ></Image>
-        {/* <Link href="/" className={styles.logo}>Gamezone</Link> */}
+
         <div className={styles.links}>
           {links.map((link) => (
             <Link key={link.id} href={link.url} className={styles.linki}>
