@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  margin-top: 250px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dead {
+  width: 796px;
+  height: 455px;
+  flex-shrink: 0;
+}
+
+.fifa {
+  width: 599px;
+  height: 450px;
+  flex-shrink: 0;
+}
+
+.h1 {
+  margin-bottom: 50px;
+  margin-right: 590px;
+  color: white;
+}
+
+.trendingProduct {
+  margin-top: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 300px;
+}
+.allProducts {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.productText {
+  color: white;
+  font-weight: 700;
+  line-height: normal;
+  font-size: 22.579px;
+  width: 50px;
+  position: absolute;
+  left: 28px;
+  bottom: 18px;
+}
+
+.row {
+  position: relative;
+}
+
+.h4 {
+  text-align: center;
+  padding-top: 4px;
+  width: 90px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #042c79;
+  font-size: 1.1rem;
+}
+
+.Regtangle {
+  width: 150px;
+  height: auto;
+}
