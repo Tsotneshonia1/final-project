@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 
 const links = [
   {
@@ -58,6 +59,8 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
+        <DarkModeToggle />
+
         <button
           className={styles.button}
           onClick={() => {

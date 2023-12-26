@@ -1,36 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200&display=swap");
 
-
-
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Oxanium', sans-serif;
+  font-family: "Oxanium", sans-serif;
 }
-
 
 html,
-body{
+body {
   max-width: 100vw;
   overflow-x: hidden;
-
-  
-  
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.container{
+.container {
   max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   padding: 0 0px;
   display: flex;
- flex-direction: column;
- background: #1E2635;
- 
+  flex-direction: column;
+  
+}
+.theme {
+  transition: 2s all ease;
+}
+
+.dark {
+  background-color: #445473;
+  color: white;
+}
+
+.light {
+  background-color: #A02471;
+  color: #445473;
 }
