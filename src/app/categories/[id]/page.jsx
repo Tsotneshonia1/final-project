@@ -1,20 +1,72 @@
-"use client"
+"use client";
 
-
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
-import Link from "next/link"
-import Image from "next/image"
+import Image from "next/image";
 
-function Purchase({params}) {
-  console.log(params)
+const Purchase = ({ params }) => {
+  const [purchaseItem, setpurchaseItem] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`https://api.escuelajs.co/api/v1/products/${params.id}`)
+      .then((response) => response.json())
+      .then((json) => {
+        setpurchaseItem(json);
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <div><h1>Purchase</h1></div>
-  )
-}
+    <div className={styles.container}>
+      {loading && <div>please wait...</div>}
+      {purchaseItem && (
+        <div>
+          <div className={styles.top}>
+            <div className={styles.info}>
+              <h1 className={styles.title}>{purchaseItem.title}</h1>
+              <p className={styles.desc}>{purchaseItem.description}</p>
+              <div className={styles.author}>
+                <Image
+                  src={purchaseItem.category.image}
+                  alt="image"
+                  width={40}
+                  height={40}
+                  className={styles.avatar}
+                />
+                <span className={styles.username}>
+                  {purchaseItem.name}
+                </span>
+              </div>
+            </div>
+            <div className={styles.imageContainer}>
+              <Image
+                src={purchaseItem.category.image}
+                alt="image"
+                fill={true}
+                className={styles.image}
+              />
+              <button
+              
+                className={`${styles.imgButton} ${styles.prevButton}`}
+              >
+                წინა ფოტო
+              </button>
+              <button
+               
+                className={`${styles.imgButton} ${styles.nextButton}`}
+              >
+                შემდეგი ფოტო
+              </button>
+            </div>
+          </div>
+          <div className={styles.content}>
+            <p className={styles.text}>${purchaseItem.price}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
-export default Purchase
-
-
-
-
+export default Purchase;
