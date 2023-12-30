@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import styles from "./registration.page.module.css"
 
 function Registration() {
   const [url, setUrl] = useState("");
@@ -17,17 +18,18 @@ function Registration() {
         onClick={() => {
           setUrl('https://jsonplaceholder.typicode.com/posts');
         }}
-      >
+        className={styles.button} >
         პირველი
       </button>
       <button
         onClick={() => {
           setUrl('https://api.escuelajs.co/api/v1/products');
         }}
-      >
+        className={styles.button} >
         მეორე
       </button>
-      <Link href={"/registration/crud"} > Go to crud operation </Link>
+      <Link href={"/registration/crud"}  className={styles.oper}> Go to crud operation </Link>
+      <Link href={"/registration/post"} className={styles.oper}>Go to posts</Link>
     </div>
   );
 }
