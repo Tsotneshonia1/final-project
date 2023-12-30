@@ -1,7 +1,8 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-function Community() {
+function Registration() {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
@@ -26,8 +27,9 @@ function Community() {
       >
         მეორე
       </button>
+      <Link href={"/registration/crud"} > Go to crud operation </Link>
     </div>
   );
 }
 
-export default Community;
+export default Registration;

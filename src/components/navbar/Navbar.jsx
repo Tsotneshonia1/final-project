@@ -19,8 +19,8 @@ const links = [
   },
   {
     id: 3,
-    title: "Community",
-    url: "/community",
+    title: "Registration",
+    url: "/registration",
   },
 
   {

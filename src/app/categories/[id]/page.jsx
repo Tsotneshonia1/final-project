@@ -7,6 +7,7 @@ import Image from "next/image";
 const Purchase = ({ params }) => {
   const [purchaseItem, setpurchaseItem] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [imgCounter, setImgCounter] = useState(0);
 
   useEffect(() => {
     fetch(`https://api.escuelajs.co/api/v1/products/${params.id}`)
@@ -17,6 +18,21 @@ const Purchase = ({ params }) => {
       });
   }, []);
 
+  const handleNextImage = () => {
+    if (imgCounter == 2) {
+      return;
+    } else {
+      setImgCounter(imgCounter + 1);
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (imgCounter == 0) {
+      return;
+    } else {
+      setImgCounter(imgCounter - 1);
+    }
+  };
   return (
     <div className={styles.container}>
       {loading && <div>please wait...</div>}
@@ -34,26 +50,24 @@ const Purchase = ({ params }) => {
                   height={40}
                   className={styles.avatar}
                 />
-                <span className={styles.username}>
-                  {purchaseItem.name}
-                </span>
+                <span className={styles.username}>{purchaseItem.name}</span>
               </div>
             </div>
             <div className={styles.imageContainer}>
               <Image
-                src={purchaseItem.category.image}
-                alt="image"
+                src={purchaseItem.images[imgCounter]}
+                alt=""
                 fill={true}
                 className={styles.image}
               />
               <button
-              
+                onClick={handlePrevImage}
                 className={`${styles.imgButton} ${styles.prevButton}`}
               >
                 წინა ფოტო
               </button>
               <button
-               
+                onClick={handleNextImage}
                 className={`${styles.imgButton} ${styles.nextButton}`}
               >
                 შემდეგი ფოტო
