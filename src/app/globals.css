@@ -37,6 +37,19 @@ a {
 }
 
 .light {
-  background-color: #A02471;
+  background-color: black;
   color: #445473;
 }
+
+
+@media  (max-width: 475px) {
+ .container {
+  
+display: flex;
+flex-direction: column;
+ 
+   background-color: red;
+
+  }
+}
+

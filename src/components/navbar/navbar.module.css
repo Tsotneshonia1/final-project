@@ -1,13 +1,12 @@
 
 .container {
-  display: fixed;
+ 
+  position: fixed;
   width: 100%;
-    margin-top: 8px;
     height:70px;
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    /* padding-left: 15px; */
     background: #445473;
     color: white;
     
