@@ -43,7 +43,7 @@ const Navbar = () => {
           src={"/Vector.png"}
           width={49}
           height={69}
-          className={styles.klizma}
+          className={styles.vector}
         ></Image>
         <Image
           src={"/Logo.png"}

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import styles from "./id.page.module.css";
 
 function SinglePost({ params }) {
   const [singlePost, setSinglePost] = useState({});
@@ -56,7 +57,7 @@ function SinglePost({ params }) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h3>{singlePost.title}</h3>
       <br />
       <p>{singlePost.body}</p>
@@ -89,7 +90,6 @@ function SinglePost({ params }) {
       <button onClick={handleEdit}>edit</button>
       <br /> <br />
       <button onClick={handleDelete}>Delete</button>
-
     </div>
   );
 }

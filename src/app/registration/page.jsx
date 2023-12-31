@@ -28,7 +28,7 @@ function Registration() {
         className={styles.button} >
         მეორე
       </button>
-      <Link href={"/registration/crud"}  className={styles.oper}> Go to crud operation </Link>
+      <Link href={"/registration/crud"}  className={styles.oper}>There are thief operations in the posts </Link>
       <Link href={"/registration/post"} className={styles.oper}>Go to posts</Link>
     </div>
   );

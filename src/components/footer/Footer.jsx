@@ -1,9 +1,46 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
+import styles from "./footer.module.css";
+import Image from "next/image";
+
+
 
 function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <div className={styles.container}>
+      <span>Follow for more</span>
+      <div className={styles.socialNetworks}>
+        <Image
+          src="/1.png"
+          width={15}
+          className={styles.icon}
+          height={15}
+          alt="facebook"
+        />
+        <Image
+          src="/2.png"
+          width={15}
+          className={styles.icon}
+          height={15}
+          alt="instagram"
+        />
+        <Image
+          src="/3.png"
+          width={15}
+          className={styles.icon}
+          height={15}
+          alt="x"
+        />
+        <Image
+          src="/4.png"
+          width={15}
+          className={styles.icon}
+          height={15}
+          alt="youtube"
+        />
+      </div>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
