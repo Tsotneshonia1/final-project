@@ -10,6 +10,7 @@
 html,
 body {
   max-width: 100vw;
+  
   overflow-x: hidden;
 }
 
@@ -41,15 +42,4 @@ a {
   color: #445473;
 }
 
-
-@media  (max-width: 475px) {
- .container {
-  
-display: flex;
-flex-direction: column;
- 
-   background-color: red;
-
-  }
-}
 

@@ -45,12 +45,13 @@ const Navbar = () => {
           height={69}
           className={styles.vector}
         ></Image>
+        <Link href="/">
         <Image
           src={"/Logo.png"}
           width={69}
           height={44}
           className={styles.logo}
-        ></Image>
+        ></Image></Link>
 
         <div className={styles.links}>
           {links.map((link) => (
